@@ -59,7 +59,7 @@ Partial Class Form1
         ' 
         Label1.AutoSize = True
         Label1.ForeColor = Color.Red
-        Label1.Location = New Point(137, 157)
+        Label1.Location = New Point(127, 157)
         Label1.Name = "Label1"
         Label1.Size = New Size(0, 15)
         Label1.TabIndex = 3
@@ -68,7 +68,7 @@ Partial Class Form1
         ' 
         Label2.AutoSize = True
         Label2.ForeColor = Color.Red
-        Label2.Location = New Point(131, 157)
+        Label2.Location = New Point(121, 157)
         Label2.Name = "Label2"
         Label2.Size = New Size(0, 15)
         Label2.TabIndex = 4
