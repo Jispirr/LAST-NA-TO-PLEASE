@@ -33,6 +33,7 @@ Partial Class Form1
         ' 
         UserName.Location = New Point(145, 70)
         UserName.Name = "UserName"
+        UserName.PlaceholderText = "Username"
         UserName.Size = New Size(158, 23)
         UserName.TabIndex = 0
         ' 
@@ -40,6 +41,8 @@ Partial Class Form1
         ' 
         PassWord.Location = New Point(145, 99)
         PassWord.Name = "PassWord"
+        PassWord.PasswordChar = "*"c
+        PassWord.PlaceholderText = "Password"
         PassWord.Size = New Size(158, 23)
         PassWord.TabIndex = 1
         ' 
@@ -55,7 +58,8 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(148, 157)
+        Label1.ForeColor = Color.Red
+        Label1.Location = New Point(137, 157)
         Label1.Name = "Label1"
         Label1.Size = New Size(0, 15)
         Label1.TabIndex = 3
@@ -63,7 +67,8 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(142, 157)
+        Label2.ForeColor = Color.Red
+        Label2.Location = New Point(131, 157)
         Label2.Name = "Label2"
         Label2.Size = New Size(0, 15)
         Label2.TabIndex = 4
@@ -79,6 +84,7 @@ Partial Class Form1
         Controls.Add(PassWord)
         Controls.Add(UserName)
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         ResumeLayout(False)
         PerformLayout()
