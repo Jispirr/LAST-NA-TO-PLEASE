@@ -1,6 +1,8 @@
 ﻿Public Class Janken
-    Private random As New Random()
+    Dim UserScore1 As Integer = 0
+    Dim ComputerScore1 As Integer = 0
 
+    Private random As New Random()
     Private Sub Janken(playerChoice As String)
 
         Dim choices() As String = {"🏔️", "📜", "💇"}
@@ -31,12 +33,16 @@
             ButtonRock.Enabled = False
             ButtonPaper.Enabled = False
 
+            UserScore.Text += 1
+
         Else
 
             LabelResult.Text = "You LOSE!"
             ButtonScissor.Enabled = False
             ButtonRock.Enabled = False
             ButtonPaper.Enabled = False
+
+            ComputerScore.text += 1
 
         End If
 
@@ -66,11 +72,11 @@
 
     End Sub
 
-    Private Sub ButtonUser_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonUser_Click(sender As Object, e As EventArgs) Handles ButtonUser.Click
         MessageBox.Show("ERROR: Choose Between the 3 choices below.")
     End Sub
 
-    Private Sub ButtonComputer_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonComputer_Click(sender As Object, e As EventArgs) Handles ButtonComputer.Click
         MessageBox.Show("ERROR: Choose Between the 3 choices below.")
 
     End Sub

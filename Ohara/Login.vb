@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Login
 
     Dim Attempts As Integer = 0
 

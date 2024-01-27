@@ -22,6 +22,7 @@ Partial Class Calculator
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Calculator))
         TextBox1 = New TextBox()
         ButtonSeven = New Button()
         ButtonEight = New Button()
@@ -44,204 +45,247 @@ Partial Class Calculator
         ' 
         ' TextBox1
         ' 
+        TextBox1.Anchor = AnchorStyles.None
         TextBox1.Font = New Font("Segoe UI Black", 24F)
-        TextBox1.Location = New Point(12, 56)
+        TextBox1.Location = New Point(12, 40)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(318, 51)
         TextBox1.TabIndex = 0
         ' 
         ' ButtonSeven
         ' 
+        ButtonSeven.Anchor = AnchorStyles.None
+        ButtonSeven.BackColor = SystemColors.ActiveBorder
         ButtonSeven.FlatStyle = FlatStyle.Popup
         ButtonSeven.Font = New Font("Segoe UI Black", 23F)
-        ButtonSeven.Location = New Point(12, 113)
+        ButtonSeven.Location = New Point(12, 97)
         ButtonSeven.Name = "ButtonSeven"
         ButtonSeven.Size = New Size(75, 66)
         ButtonSeven.TabIndex = 1
         ButtonSeven.Text = "7"
-        ButtonSeven.UseVisualStyleBackColor = True
+        ButtonSeven.UseVisualStyleBackColor = False
         ' 
         ' ButtonEight
         ' 
+        ButtonEight.Anchor = AnchorStyles.None
+        ButtonEight.BackColor = SystemColors.ActiveBorder
         ButtonEight.FlatStyle = FlatStyle.Popup
         ButtonEight.Font = New Font("Segoe UI Black", 23F)
-        ButtonEight.Location = New Point(93, 113)
+        ButtonEight.Location = New Point(93, 97)
         ButtonEight.Name = "ButtonEight"
         ButtonEight.Size = New Size(75, 66)
         ButtonEight.TabIndex = 2
         ButtonEight.Text = "8"
-        ButtonEight.UseVisualStyleBackColor = True
+        ButtonEight.UseVisualStyleBackColor = False
         ' 
         ' ButtonNine
         ' 
+        ButtonNine.Anchor = AnchorStyles.None
+        ButtonNine.BackColor = SystemColors.ActiveBorder
         ButtonNine.FlatStyle = FlatStyle.Popup
         ButtonNine.Font = New Font("Segoe UI Black", 23F)
-        ButtonNine.Location = New Point(174, 113)
+        ButtonNine.Location = New Point(174, 97)
         ButtonNine.Name = "ButtonNine"
         ButtonNine.Size = New Size(75, 66)
         ButtonNine.TabIndex = 3
         ButtonNine.Text = "9"
-        ButtonNine.UseVisualStyleBackColor = True
+        ButtonNine.UseVisualStyleBackColor = False
         ' 
         ' ButtonAddition
         ' 
+        ButtonAddition.Anchor = AnchorStyles.None
+        ButtonAddition.BackColor = SystemColors.ControlText
         ButtonAddition.FlatStyle = FlatStyle.Popup
         ButtonAddition.Font = New Font("Segoe UI Black", 23F)
-        ButtonAddition.Location = New Point(255, 113)
+        ButtonAddition.ForeColor = SystemColors.HighlightText
+        ButtonAddition.Location = New Point(255, 97)
         ButtonAddition.Name = "ButtonAddition"
         ButtonAddition.Size = New Size(75, 66)
         ButtonAddition.TabIndex = 4
         ButtonAddition.Text = "+"
-        ButtonAddition.UseVisualStyleBackColor = True
+        ButtonAddition.UseVisualStyleBackColor = False
         ' 
         ' ButtonFour
         ' 
+        ButtonFour.Anchor = AnchorStyles.None
+        ButtonFour.BackColor = SystemColors.ActiveBorder
         ButtonFour.FlatStyle = FlatStyle.Popup
         ButtonFour.Font = New Font("Segoe UI Black", 23F)
-        ButtonFour.Location = New Point(12, 185)
+        ButtonFour.Location = New Point(12, 169)
         ButtonFour.Name = "ButtonFour"
         ButtonFour.Size = New Size(75, 66)
         ButtonFour.TabIndex = 5
         ButtonFour.Text = "4"
-        ButtonFour.UseVisualStyleBackColor = True
+        ButtonFour.UseVisualStyleBackColor = False
         ' 
         ' ButtonFive
         ' 
+        ButtonFive.Anchor = AnchorStyles.None
+        ButtonFive.BackColor = SystemColors.ActiveBorder
         ButtonFive.FlatStyle = FlatStyle.Popup
         ButtonFive.Font = New Font("Segoe UI Black", 23F)
-        ButtonFive.Location = New Point(93, 185)
+        ButtonFive.Location = New Point(93, 169)
         ButtonFive.Name = "ButtonFive"
         ButtonFive.Size = New Size(75, 66)
         ButtonFive.TabIndex = 6
         ButtonFive.Text = "5"
-        ButtonFive.UseVisualStyleBackColor = True
+        ButtonFive.UseVisualStyleBackColor = False
         ' 
         ' ButtonSix
         ' 
+        ButtonSix.Anchor = AnchorStyles.None
+        ButtonSix.BackColor = SystemColors.ActiveBorder
         ButtonSix.FlatStyle = FlatStyle.Popup
         ButtonSix.Font = New Font("Segoe UI Black", 23F)
-        ButtonSix.Location = New Point(174, 185)
+        ButtonSix.Location = New Point(174, 169)
         ButtonSix.Name = "ButtonSix"
         ButtonSix.Size = New Size(75, 66)
         ButtonSix.TabIndex = 7
         ButtonSix.Text = "6"
-        ButtonSix.UseVisualStyleBackColor = True
+        ButtonSix.UseVisualStyleBackColor = False
         ' 
         ' ButtonMinus
         ' 
+        ButtonMinus.Anchor = AnchorStyles.None
+        ButtonMinus.BackColor = SystemColors.ControlText
         ButtonMinus.FlatStyle = FlatStyle.Popup
         ButtonMinus.Font = New Font("Segoe UI Black", 23F)
-        ButtonMinus.Location = New Point(254, 185)
+        ButtonMinus.ForeColor = SystemColors.HighlightText
+        ButtonMinus.Location = New Point(254, 169)
         ButtonMinus.Name = "ButtonMinus"
         ButtonMinus.Size = New Size(75, 66)
         ButtonMinus.TabIndex = 8
         ButtonMinus.Text = "-"
-        ButtonMinus.UseVisualStyleBackColor = True
+        ButtonMinus.UseVisualStyleBackColor = False
         ' 
         ' ButtonOne
         ' 
+        ButtonOne.Anchor = AnchorStyles.None
+        ButtonOne.BackColor = SystemColors.ActiveBorder
         ButtonOne.FlatStyle = FlatStyle.Popup
         ButtonOne.Font = New Font("Segoe UI Black", 23F)
-        ButtonOne.Location = New Point(12, 257)
+        ButtonOne.Location = New Point(12, 241)
         ButtonOne.Name = "ButtonOne"
         ButtonOne.Size = New Size(75, 66)
         ButtonOne.TabIndex = 9
         ButtonOne.Text = "1"
-        ButtonOne.UseVisualStyleBackColor = True
+        ButtonOne.UseVisualStyleBackColor = False
         ' 
         ' ButtonTwo
         ' 
+        ButtonTwo.Anchor = AnchorStyles.None
+        ButtonTwo.BackColor = SystemColors.ActiveBorder
         ButtonTwo.FlatStyle = FlatStyle.Popup
         ButtonTwo.Font = New Font("Segoe UI Black", 23F)
-        ButtonTwo.Location = New Point(93, 257)
+        ButtonTwo.Location = New Point(93, 241)
         ButtonTwo.Name = "ButtonTwo"
         ButtonTwo.Size = New Size(75, 66)
         ButtonTwo.TabIndex = 10
         ButtonTwo.Text = "2"
-        ButtonTwo.UseVisualStyleBackColor = True
+        ButtonTwo.UseVisualStyleBackColor = False
         ' 
         ' ButtonThree
         ' 
+        ButtonThree.Anchor = AnchorStyles.None
+        ButtonThree.BackColor = SystemColors.ActiveBorder
         ButtonThree.FlatStyle = FlatStyle.Popup
         ButtonThree.Font = New Font("Segoe UI Black", 23F)
-        ButtonThree.Location = New Point(174, 257)
+        ButtonThree.Location = New Point(174, 241)
         ButtonThree.Name = "ButtonThree"
         ButtonThree.Size = New Size(75, 66)
         ButtonThree.TabIndex = 11
         ButtonThree.Text = "3"
-        ButtonThree.UseVisualStyleBackColor = True
+        ButtonThree.UseVisualStyleBackColor = False
         ' 
         ' ButtonMultiplication
         ' 
+        ButtonMultiplication.Anchor = AnchorStyles.None
+        ButtonMultiplication.BackColor = SystemColors.ControlText
         ButtonMultiplication.FlatStyle = FlatStyle.Popup
         ButtonMultiplication.Font = New Font("Segoe UI Black", 23F)
-        ButtonMultiplication.Location = New Point(254, 257)
+        ButtonMultiplication.ForeColor = SystemColors.HighlightText
+        ButtonMultiplication.Location = New Point(254, 241)
         ButtonMultiplication.Name = "ButtonMultiplication"
         ButtonMultiplication.Size = New Size(75, 66)
         ButtonMultiplication.TabIndex = 12
         ButtonMultiplication.Text = "x"
-        ButtonMultiplication.UseVisualStyleBackColor = True
+        ButtonMultiplication.UseVisualStyleBackColor = False
         ' 
         ' ButtonEquals
         ' 
+        ButtonEquals.Anchor = AnchorStyles.None
+        ButtonEquals.BackColor = SystemColors.ControlText
         ButtonEquals.FlatStyle = FlatStyle.Popup
         ButtonEquals.Font = New Font("Segoe UI Black", 23F)
-        ButtonEquals.Location = New Point(12, 329)
+        ButtonEquals.ForeColor = SystemColors.HighlightText
+        ButtonEquals.Location = New Point(12, 313)
         ButtonEquals.Name = "ButtonEquals"
         ButtonEquals.Size = New Size(156, 66)
         ButtonEquals.TabIndex = 13
         ButtonEquals.Text = "="
-        ButtonEquals.UseVisualStyleBackColor = True
+        ButtonEquals.UseVisualStyleBackColor = False
         ' 
         ' ButtonZero
         ' 
+        ButtonZero.Anchor = AnchorStyles.None
+        ButtonZero.BackColor = SystemColors.ControlText
         ButtonZero.FlatStyle = FlatStyle.Popup
         ButtonZero.Font = New Font("Segoe UI Black", 23F)
-        ButtonZero.Location = New Point(174, 329)
+        ButtonZero.ForeColor = SystemColors.HighlightText
+        ButtonZero.Location = New Point(174, 313)
         ButtonZero.Name = "ButtonZero"
         ButtonZero.Size = New Size(75, 66)
         ButtonZero.TabIndex = 15
         ButtonZero.Text = "0"
-        ButtonZero.UseVisualStyleBackColor = True
+        ButtonZero.UseVisualStyleBackColor = False
         ' 
         ' ButtonDivision
         ' 
+        ButtonDivision.Anchor = AnchorStyles.None
+        ButtonDivision.BackColor = SystemColors.ControlText
         ButtonDivision.FlatStyle = FlatStyle.Popup
         ButtonDivision.Font = New Font("Segoe UI Black", 23F)
-        ButtonDivision.Location = New Point(254, 329)
+        ButtonDivision.ForeColor = SystemColors.HighlightText
+        ButtonDivision.Location = New Point(254, 313)
         ButtonDivision.Name = "ButtonDivision"
         ButtonDivision.Size = New Size(75, 66)
         ButtonDivision.TabIndex = 16
         ButtonDivision.Text = "/"
-        ButtonDivision.UseVisualStyleBackColor = True
+        ButtonDivision.UseVisualStyleBackColor = False
         ' 
         ' ButtonClear
         ' 
+        ButtonClear.Anchor = AnchorStyles.None
+        ButtonClear.BackColor = SystemColors.ActiveBorder
         ButtonClear.FlatStyle = FlatStyle.Popup
         ButtonClear.Font = New Font("Segoe UI Black", 11F)
-        ButtonClear.Location = New Point(255, 20)
+        ButtonClear.Location = New Point(255, 4)
         ButtonClear.Name = "ButtonClear"
         ButtonClear.Size = New Size(74, 30)
         ButtonClear.TabIndex = 17
         ButtonClear.Text = "Clear"
-        ButtonClear.UseVisualStyleBackColor = True
+        ButtonClear.UseVisualStyleBackColor = False
         ' 
         ' BackButton
         ' 
+        BackButton.Anchor = AnchorStyles.None
+        BackButton.BackColor = SystemColors.ActiveBorder
         BackButton.FlatStyle = FlatStyle.Popup
         BackButton.Font = New Font("Segoe UI Black", 11F)
-        BackButton.Location = New Point(12, 20)
+        BackButton.Location = New Point(12, 4)
         BackButton.Name = "BackButton"
         BackButton.Size = New Size(75, 30)
         BackButton.TabIndex = 18
         BackButton.Text = "Back"
-        BackButton.UseVisualStyleBackColor = True
+        BackButton.UseVisualStyleBackColor = False
         ' 
         ' Calculator
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(341, 404)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(341, 389)
         Controls.Add(BackButton)
         Controls.Add(ButtonClear)
         Controls.Add(ButtonDivision)
@@ -260,6 +304,7 @@ Partial Class Calculator
         Controls.Add(ButtonEight)
         Controls.Add(ButtonSeven)
         Controls.Add(TextBox1)
+        DoubleBuffered = True
         Name = "Calculator"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Calculator"
