@@ -186,13 +186,15 @@
 
     End Sub
 
+ Private Sub ButtonTryAgain_Click(sender As Object, e As EventArgs) Handles ButtonTryAgain.Click
+        ResetGame()
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         Choices.Show()
         Me.Hide()
 
     End Sub
 
-    Private Sub ButtonTryAgain_Click(sender As Object, e As EventArgs) Handles ButtonTryAgain.Click
-        ResetGame()
-    End Sub
+   
 End Class
