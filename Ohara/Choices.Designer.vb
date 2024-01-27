@@ -31,7 +31,7 @@ Partial Class Choices
         ' 
         ' CalculatorButton
         ' 
-        CalculatorButton.BackColor = SystemColors.ControlText
+        CalculatorButton.BackColor = SystemColors.ButtonShadow
         CalculatorButton.Font = New Font("Segoe UI Black", 24F)
         CalculatorButton.ForeColor = SystemColors.HighlightText
         CalculatorButton.Location = New Point(205, 72)
@@ -43,7 +43,7 @@ Partial Class Choices
         ' 
         ' JankenButton
         ' 
-        JankenButton.BackColor = SystemColors.ControlText
+        JankenButton.BackColor = SystemColors.ButtonShadow
         JankenButton.Font = New Font("Segoe UI Black", 24F)
         JankenButton.ForeColor = SystemColors.HighlightText
         JankenButton.Location = New Point(205, 155)
@@ -55,7 +55,7 @@ Partial Class Choices
         ' 
         ' GlassGameButton
         ' 
-        GlassGameButton.BackColor = SystemColors.ControlText
+        GlassGameButton.BackColor = SystemColors.ButtonShadow
         GlassGameButton.Font = New Font("Segoe UI Black", 24F)
         GlassGameButton.ForeColor = SystemColors.HighlightText
         GlassGameButton.Location = New Point(205, 238)
@@ -67,7 +67,7 @@ Partial Class Choices
         ' 
         ' CloseButton
         ' 
-        CloseButton.BackColor = SystemColors.ControlText
+        CloseButton.BackColor = SystemColors.ButtonShadow
         CloseButton.Font = New Font("Segoe UI Black", 24F)
         CloseButton.ForeColor = SystemColors.HighlightText
         CloseButton.Location = New Point(239, 321)

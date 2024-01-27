@@ -66,6 +66,7 @@
         ButtonComputer.Text = ""
         LabelResult.Text = ""
 
+
         ButtonScissor.Enabled = True
         ButtonRock.Enabled = True
         ButtonPaper.Enabled = True
