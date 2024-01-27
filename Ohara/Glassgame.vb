@@ -1,55 +1,56 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class Glassgame
-    Dim playerPosition As Integer = 1 ' Starting position
-    Dim gameOver As Boolean = False
+﻿Public Class Glassgame
     Dim random As New Random()
+    Dim Mee As Integer = 1
+    Dim EndGame As Boolean = False
 
     Private Sub Glass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Set the starting position
-        SetPlayerPosition()
+
+        SetMee()
+        DisableUpdate()
+
+        LabelDIED.Visible = False
+        ButtonTryAgain.Visible = False
+    End Sub
+
+    Private Sub SetMee()
+        Me.Controls("tile" & Mee).Text = "🤸🏽‍"
+    End Sub
+
+    Private Sub MoveUser(nextPosition As Integer)
+
+        Me.Controls("tile" & Mee).Text = ""
+        Mee = nextPosition
+        SetMee()
         DisableUpdate()
     End Sub
 
-    Private Sub SetPlayerPosition()
-        Me.Controls("tile" & playerPosition).Text = "🚶"
-    End Sub
-
-    Private Sub MovePlayer(nextPosition As Integer)
-        ' Update the player position
-        Me.Controls("tile" & playerPosition).Text = "" ' Clear current position
-        playerPosition = nextPosition
-        SetPlayerPosition()
-        DisableUpdate()
-    End Sub
-
-    Private Sub CheckGameOver()
-        ' For the message boxes if you reached tile8 or just died lmao 🔥🔥
-        If playerPosition = 14 Then
+    Private Sub CheckEndGame()
+        If Mee = 14 Then
             MessageBox.Show("PANALO KA")
             ResetGame()
-        ElseIf random.Next(2) = 0 Then ' The 50% chance of dying
-            Me.Controls("tile" & playerPosition).Text = "💀"
-            For i As Integer = 1 To 14
-                Me.Controls("tile" & i).Enabled = False
-            Next
-            MessageBox.Show("HAHAHAHAH NAMATAY KA")
+        ElseIf random.Next(2) = 0 Then
+            Me.Controls("tile" & Mee).Text = "☠️"
+            For o As Integer = 1 To 14
+                Me.Controls("tile" & o).Enabled = False
 
-            ResetGame()
+            Next
+            LabelDIED.Text = "YOU DIED!"
+            LabelDIED.Visible = True
+            ButtonTryAgain.Visible = True
+            EndGame = True
         End If
     End Sub
 
     Private Sub ResetGame()
-        gameOver = False
+        EndGame = False
+        ButtonTryAgain.Visible = False
+        LabelDIED.Visible = False
 
-        ' Clear player emoji and reset font colors
         For i As Integer = 1 To 14
             Me.Controls("tile" & i).Text = ""
-
         Next
-        ' Reset playerPosition then put player emoji on playerPosition, also updates disabled buttons yeah
-        playerPosition = 1
-        SetPlayerPosition()
+        Mee = 1
+        SetMee()
         DisableUpdate()
     End Sub
 
@@ -57,137 +58,141 @@ Public Class Glassgame
         For i As Integer = 1 To 14
             Me.Controls("tile" & i).Enabled = False
         Next
-        If playerPosition = 1 Then
+        If Mee = 1 Then
             Tile2.Enabled = True
             Tile3.Enabled = True
-        ElseIf playerPosition = 2 Or playerPosition = 3 Then
+        ElseIf Mee = 2 Or Mee = 3 Then
             Tile4.Enabled = True
             Tile5.Enabled = True
-        ElseIf playerPosition = 4 Or playerPosition = 5 Then
+        ElseIf Mee = 4 Or Mee = 5 Then
             Tile6.Enabled = True
             Tile7.Enabled = True
-        ElseIf playerPosition = 6 Or playerPosition = 7 Then
+        ElseIf Mee = 6 Or Mee = 7 Then
             Tile8.Enabled = True
             Tile9.Enabled = True
-        ElseIf playerPosition = 8 Or playerPosition = 9 Then
+        ElseIf Mee = 8 Or Mee = 9 Then
             Tile10.Enabled = True
             Tile11.Enabled = True
-        ElseIf playerPosition = 10 Or playerPosition = 11 Then
+        ElseIf Mee = 10 Or Mee = 11 Then
             Tile12.Enabled = True
             Tile13.Enabled = True
-        ElseIf playerPosition = 12 Or playerPosition = 13 Then
+        ElseIf Mee = 12 Or Mee = 13 Then
             Tile14.Enabled = True
         End If
 
     End Sub
 
     Private Sub tile2_Click(sender As Object, e As EventArgs) Handles Tile2.Click
-        If Not gameOver Then
-            MovePlayer(2)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(2)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile3_Click(sender As Object, e As EventArgs) Handles Tile3.Click
-        If Not gameOver Then
-            MovePlayer(3)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(3)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile4_Click(sender As Object, e As EventArgs) Handles Tile4.Click
-        If Not gameOver Then
-            MovePlayer(4)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(4)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile5_Click(sender As Object, e As EventArgs) Handles Tile5.Click
-        If Not gameOver Then
-            MovePlayer(5)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(5)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile6_Click(sender As Object, e As EventArgs) Handles Tile6.Click
-        If Not gameOver Then
-            MovePlayer(6)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(6)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile7_Click(sender As Object, e As EventArgs) Handles Tile7.Click
-        If Not gameOver Then
-            MovePlayer(7)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(7)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile8_Click(sender As Object, e As EventArgs) Handles Tile8.Click
-        If Not gameOver Then
-            MovePlayer(8)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(8)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile9_Click(sender As Object, e As EventArgs) Handles Tile9.Click
-        If Not gameOver Then
-            MovePlayer(9)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(9)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile10_Click(sender As Object, e As EventArgs) Handles Tile10.Click
-        If Not gameOver Then
-            MovePlayer(10)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(10)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile11_Click(sender As Object, e As EventArgs) Handles Tile11.Click
-        If Not gameOver Then
-            MovePlayer(11)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(11)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile12_Click(sender As Object, e As EventArgs) Handles Tile12.Click
-        If Not gameOver Then
-            MovePlayer(12)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(12)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile13_Click(sender As Object, e As EventArgs) Handles Tile13.Click
-        If Not gameOver Then
-            MovePlayer(13)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(13)
+            CheckEndGame()
         End If
 
     End Sub
 
     Private Sub tile14_Click(sender As Object, e As EventArgs) Handles Tile14.Click
-        If Not gameOver Then
-            MovePlayer(14)
-            CheckGameOver()
+        If Not EndGame Then
+            MoveUser(14)
+            CheckEndGame()
         End If
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         Choices.Show()
         Me.Hide()
 
+    End Sub
+
+    Private Sub ButtonTryAgain_Click(sender As Object, e As EventArgs) Handles ButtonTryAgain.Click
+        ResetGame()
     End Sub
 End Class

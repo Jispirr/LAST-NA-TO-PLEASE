@@ -1,6 +1,4 @@
 ﻿Public Class Janken
-    Dim UserScore1 As Integer = 0
-    Dim ComputerScore1 As Integer = 0
 
     Private random As New Random()
     Private Sub Janken(playerChoice As String)
@@ -12,39 +10,6 @@
         ButtonComputer.Text = computerChoice
 
         Winner(playerChoice, computerChoice)
-
-    End Sub
-
-    Private Sub Winner(playerChoice As String, computerChoice As String)
-
-        If playerChoice = computerChoice Then
-
-            LabelResult.Text = "It's a TIE!"
-            ButtonScissor.Enabled = False
-            ButtonRock.Enabled = False
-            ButtonPaper.Enabled = False
-
-        ElseIf (playerChoice = "🏔️" AndAlso computerChoice = "💇") OrElse
-               (playerChoice = "💇" AndAlso computerChoice = "📜") OrElse
-               (playerChoice = "📜" AndAlso computerChoice = "🏔️") Then
-
-            LabelResult.Text = "You WIN!"
-            ButtonScissor.Enabled = False
-            ButtonRock.Enabled = False
-            ButtonPaper.Enabled = False
-
-            UserScore.Text += 1
-
-        Else
-
-            LabelResult.Text = "You LOSE!"
-            ButtonScissor.Enabled = False
-            ButtonRock.Enabled = False
-            ButtonPaper.Enabled = False
-
-            ComputerScore.text += 1
-
-        End If
 
     End Sub
 
@@ -60,16 +25,40 @@
         Janken("💇")
     End Sub
 
-    Private Sub ButtonTryAgain_Click(sender As Object, e As EventArgs) Handles ButtonTry.Click
+    Private Sub Winner(playerChoice As String, computerChoice As String)
+
+        If playerChoice = computerChoice Then
+
+            LabelResult.Text = "It's a TIE!"
+
+
+        ElseIf (playerChoice = "🏔️" AndAlso computerChoice = "💇") OrElse
+               (playerChoice = "💇" AndAlso computerChoice = "📜") OrElse
+               (playerChoice = "📜" AndAlso computerChoice = "🏔️") Then
+
+            LabelResult.Text = "You WIN!"
+
+            UserScore.Text += 1
+
+        Else
+
+            LabelResult.Text = "You LOSE!"
+
+            ComputerScore.Text += 1
+
+        End If
+
+    End Sub
+
+
+    Private Sub ButtonReset_Click(sender As Object, e As EventArgs) Handles ButtonReset.Click
 
         ButtonUser.Text = ""
         ButtonComputer.Text = ""
         LabelResult.Text = ""
+        UserScore.Text = "0"
+        ComputerScore.Text = "0"
 
-
-        ButtonScissor.Enabled = True
-        ButtonRock.Enabled = True
-        ButtonPaper.Enabled = True
 
     End Sub
 
@@ -86,4 +75,7 @@
         Me.Hide()
     End Sub
 
+    Private Sub Janken_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -31,48 +31,48 @@ Partial Class Choices
         ' 
         ' CalculatorButton
         ' 
-        CalculatorButton.BackColor = SystemColors.ButtonShadow
+        CalculatorButton.BackColor = SystemColors.HighlightText
         CalculatorButton.Font = New Font("Segoe UI Black", 24F)
-        CalculatorButton.ForeColor = SystemColors.HighlightText
-        CalculatorButton.Location = New Point(205, 72)
+        CalculatorButton.ForeColor = SystemColors.ControlText
+        CalculatorButton.Location = New Point(205, 119)
         CalculatorButton.Name = "CalculatorButton"
-        CalculatorButton.Size = New Size(391, 77)
+        CalculatorButton.Size = New Size(391, 54)
         CalculatorButton.TabIndex = 0
         CalculatorButton.Text = "CALCULATOR"
         CalculatorButton.UseVisualStyleBackColor = False
         ' 
         ' JankenButton
         ' 
-        JankenButton.BackColor = SystemColors.ButtonShadow
+        JankenButton.BackColor = SystemColors.HighlightText
         JankenButton.Font = New Font("Segoe UI Black", 24F)
-        JankenButton.ForeColor = SystemColors.HighlightText
-        JankenButton.Location = New Point(205, 155)
+        JankenButton.ForeColor = SystemColors.ControlText
+        JankenButton.Location = New Point(205, 179)
         JankenButton.Name = "JankenButton"
-        JankenButton.Size = New Size(391, 77)
+        JankenButton.Size = New Size(391, 53)
         JankenButton.TabIndex = 1
         JankenButton.Text = "JANKEN"
         JankenButton.UseVisualStyleBackColor = False
         ' 
         ' GlassGameButton
         ' 
-        GlassGameButton.BackColor = SystemColors.ButtonShadow
+        GlassGameButton.BackColor = SystemColors.HighlightText
         GlassGameButton.Font = New Font("Segoe UI Black", 24F)
-        GlassGameButton.ForeColor = SystemColors.HighlightText
+        GlassGameButton.ForeColor = SystemColors.ControlText
         GlassGameButton.Location = New Point(205, 238)
         GlassGameButton.Name = "GlassGameButton"
-        GlassGameButton.Size = New Size(391, 77)
+        GlassGameButton.Size = New Size(391, 55)
         GlassGameButton.TabIndex = 2
         GlassGameButton.Text = "GLASS GAME"
         GlassGameButton.UseVisualStyleBackColor = False
         ' 
         ' CloseButton
         ' 
-        CloseButton.BackColor = SystemColors.ButtonShadow
+        CloseButton.BackColor = SystemColors.HighlightText
         CloseButton.Font = New Font("Segoe UI Black", 24F)
-        CloseButton.ForeColor = SystemColors.HighlightText
-        CloseButton.Location = New Point(239, 321)
+        CloseButton.ForeColor = SystemColors.ControlText
+        CloseButton.Location = New Point(282, 328)
         CloseButton.Name = "CloseButton"
-        CloseButton.Size = New Size(327, 77)
+        CloseButton.Size = New Size(239, 55)
         CloseButton.TabIndex = 3
         CloseButton.Text = "CLOSE"
         CloseButton.UseVisualStyleBackColor = False
